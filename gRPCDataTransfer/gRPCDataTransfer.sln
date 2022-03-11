@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.127
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "proto", "proto", "{AA73F0DB-5EBA-4CF7-B32E-FDA6DBC527D2}"
+	ProjectSection(SolutionItems) = preProject
+		proto\Greeting.proto = proto\Greeting.proto
+		proto\Image.proto = proto\Image.proto
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPCClient", "gRPCClient\gRPCClient.csproj", "{AFC389B1-527F-4ED3-8B5F-A7F6C9C69E19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPCServer", "gRPCServer\gRPCServer.csproj", "{34C5F6C5-4926-4431-8EDF-44D7EC6DC996}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFC389B1-527F-4ED3-8B5F-A7F6C9C69E19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC389B1-527F-4ED3-8B5F-A7F6C9C69E19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC389B1-527F-4ED3-8B5F-A7F6C9C69E19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC389B1-527F-4ED3-8B5F-A7F6C9C69E19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34C5F6C5-4926-4431-8EDF-44D7EC6DC996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34C5F6C5-4926-4431-8EDF-44D7EC6DC996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34C5F6C5-4926-4431-8EDF-44D7EC6DC996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34C5F6C5-4926-4431-8EDF-44D7EC6DC996}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A93AF939-912D-48AD-964F-F5D5734FF5BF}
+	EndGlobalSection
+EndGlobal

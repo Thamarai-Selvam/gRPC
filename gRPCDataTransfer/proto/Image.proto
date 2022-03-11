@@ -1,0 +1,64 @@
+syntax = "proto3";
+package Image;
+import "google/protobuf/timestamp.proto";
+
+enum FileAttributes {
+    FirstEnumValueToBeZeroInProto3 = 0;
+    ReadOnly = 1;
+    Hidden = 2;
+    System = 4;
+    Directory = 16;
+    Archive = 32;
+    Device = 64;
+    Normal = 128;
+    Temporary = 256;
+    SparseFile = 512;
+    ReparsePoint = 1024;
+    Compressed = 2048;
+    Offline = 4096;
+    NotContentIndexed = 8192;
+    Encrypted = 16384;
+    IntegrityStream = 32768;
+    NoScrubData = 131072;
+}
+
+message Image {
+	string Name = 1;
+    int64 Length = 2;
+    string DirectoryName = 3;
+    bool IsReadOnly = 4;
+    bool IsExists = 5;
+    string FullName = 6;
+    string Extension = 7;
+    google.protobuf.Timestamp CreationTimeUtc = 8;
+    google.protobuf.Timestamp LastAccessTimeUtc = 9;
+    google.protobuf.Timestamp LastWriteTimeUtc = 10;
+    FileAttributes Attributes = 11;
+    bytes ImageBlob = 12;
+}
+
+message ImageList {
+    repeated Image Image = 1;
+}
+
+message ImageRequest {
+	string FilePath = 1;
+}
+
+message ImageResponse {
+	Image Image = 1;
+}
+
+message ImageListRequest {
+	string DirectoryPath = 1;
+}
+
+message ImageListResponse {
+	ImageList ImageList = 1;
+}
+
+service ImageService {
+	rpc GetImage(ImageRequest) returns (ImageResponse) {}
+	rpc GetImageList(ImageListRequest) returns (ImageListResponse) {}
+
+}
