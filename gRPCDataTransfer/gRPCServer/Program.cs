@@ -18,8 +18,8 @@ namespace gRPCServer
 
             try
             {
-                server = new Server(new List<ChannelOption> { new ChannelOption(ChannelOptions.MaxReceiveMessageLength, 500 * 1024 * 1024),
-                new ChannelOption(ChannelOptions.MaxSendMessageLength, 500 * 1024 * 1024)})
+                server = new Server(new List<ChannelOption> { new ChannelOption(ChannelOptions.MaxReceiveMessageLength, 1500 * 1024 * 1024),
+                new ChannelOption(ChannelOptions.MaxSendMessageLength, 1500 * 1024 * 1024)})
                 {
                     Services = { ImageService.BindService(new ImageServiceImpl()) },
                     Ports = {new ServerPort("localhost", port, ServerCredentials.Insecure)}

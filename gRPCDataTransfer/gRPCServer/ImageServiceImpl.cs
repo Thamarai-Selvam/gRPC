@@ -40,12 +40,14 @@ namespace gRPCServer
 
         private IEnumerable<string> getPNGFilesList()
         {
-            return Directory.EnumerateFiles(this.pathString, "*.png", SearchOption.AllDirectories);
+            return Directory.EnumerateFiles(this.pathString, "*.jpg", SearchOption.AllDirectories);
         }
 
         private int getFilesCount()
         {
-            return (from file in this.PNGFiles select file).Count();
+            var size = (from file in this.PNGFiles select file).Count();
+            Console.WriteLine("List<Image> length : ", size);
+            return size;
         }
         private Image.ImageList CreateImageList(string directoryPath)
         {
@@ -73,8 +75,8 @@ namespace gRPCServer
                         CreationTimeUtc = Timestamp.FromDateTime(fileInfo.CreationTimeUtc),
                         LastAccessTimeUtc = Timestamp.FromDateTime(fileInfo.LastAccessTimeUtc),
                         LastWriteTimeUtc = Timestamp.FromDateTime(fileInfo.LastWriteTimeUtc),
-                        Attributes = (Image.FileAttributes)fileInfo.Attributes,
-                        ImageBlob = ByteString.CopyFrom(imageBlob)
+                        Attributes = (Image.FileAttributes)fileInfo.Attributes
+                        //ImageBlob = ByteString.CopyFrom(imageBlob)
                     };
                     images.Image.Add(image);
 
@@ -91,7 +93,7 @@ namespace gRPCServer
             Image.Image image = null;
             if (fileInfo != null || fileInfo.Length == 0)
             {
-                byte[] imageBlob = GetImageFromPath(fileInfo.FullName);
+               // byte[] imageBlob = GetImageFromPath(fileInfo.FullName);
                 image = new Image.Image{Name = fileInfo.Name,
                                     Length = fileInfo.Length,
                                     DirectoryName = fileInfo.DirectoryName,
@@ -103,7 +105,7 @@ namespace gRPCServer
                                     LastAccessTimeUtc = Timestamp.FromDateTime(fileInfo.LastAccessTimeUtc),
                                     LastWriteTimeUtc = Timestamp.FromDateTime(fileInfo.LastWriteTimeUtc),
                                     Attributes = (Image.FileAttributes)fileInfo.Attributes,
-                                    ImageBlob = ByteString.CopyFrom(imageBlob)
+                                   // ImageBlob = ByteString.CopyFrom(imageBlob)
                 };
                 
             }

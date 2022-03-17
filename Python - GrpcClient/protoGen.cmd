@@ -1,5 +1,5 @@
 echo OFF
-echo CustomMUIBuilder
+echo Proto Generator from proto file
 echo.
 
 

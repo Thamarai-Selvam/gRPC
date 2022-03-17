@@ -34,7 +34,7 @@ message Image {
     google.protobuf.Timestamp LastAccessTimeUtc = 9;
     google.protobuf.Timestamp LastWriteTimeUtc = 10;
     FileAttributes Attributes = 11;
-    bytes ImageBlob = 12;
+   // bytes ImageBlob = 12;
 }
 
 message ImageList {

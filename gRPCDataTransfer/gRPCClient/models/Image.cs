@@ -25,34 +25,34 @@ namespace Image {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CgtJbWFnZS5wcm90bxIFSW1hZ2UaH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
-            "bXAucHJvdG8i5wIKBUltYWdlEgwKBE5hbWUYASABKAkSDgoGTGVuZ3RoGAIg",
+            "bXAucHJvdG8i1AIKBUltYWdlEgwKBE5hbWUYASABKAkSDgoGTGVuZ3RoGAIg",
             "ASgDEhUKDURpcmVjdG9yeU5hbWUYAyABKAkSEgoKSXNSZWFkT25seRgEIAEo",
             "CBIQCghJc0V4aXN0cxgFIAEoCBIQCghGdWxsTmFtZRgGIAEoCRIRCglFeHRl",
             "bnNpb24YByABKAkSMwoPQ3JlYXRpb25UaW1lVXRjGAggASgLMhouZ29vZ2xl",
             "LnByb3RvYnVmLlRpbWVzdGFtcBI1ChFMYXN0QWNjZXNzVGltZVV0YxgJIAEo",
             "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNAoQTGFzdFdyaXRlVGlt",
             "ZVV0YxgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKQoKQXR0",
-            "cmlidXRlcxgLIAEoDjIVLkltYWdlLkZpbGVBdHRyaWJ1dGVzEhEKCUltYWdl",
-            "QmxvYhgMIAEoDCIoCglJbWFnZUxpc3QSGwoFSW1hZ2UYASADKAsyDC5JbWFn",
-            "ZS5JbWFnZSIgCgxJbWFnZVJlcXVlc3QSEAoIRmlsZVBhdGgYASABKAkiLAoN",
-            "SW1hZ2VSZXNwb25zZRIbCgVJbWFnZRgBIAEoCzIMLkltYWdlLkltYWdlIikK",
-            "EEltYWdlTGlzdFJlcXVlc3QSFQoNRGlyZWN0b3J5UGF0aBgBIAEoCSI4ChFJ",
-            "bWFnZUxpc3RSZXNwb25zZRIjCglJbWFnZUxpc3QYASABKAsyEC5JbWFnZS5J",
-            "bWFnZUxpc3QqtQIKDkZpbGVBdHRyaWJ1dGVzEiIKHkZpcnN0RW51bVZhbHVl",
-            "VG9CZVplcm9JblByb3RvMxAAEgwKCFJlYWRPbmx5EAESCgoGSGlkZGVuEAIS",
-            "CgoGU3lzdGVtEAQSDQoJRGlyZWN0b3J5EBASCwoHQXJjaGl2ZRAgEgoKBkRl",
-            "dmljZRBAEgsKBk5vcm1hbBCAARIOCglUZW1wb3JhcnkQgAISDwoKU3BhcnNl",
-            "RmlsZRCABBIRCgxSZXBhcnNlUG9pbnQQgAgSDwoKQ29tcHJlc3NlZBCAEBIM",
-            "CgdPZmZsaW5lEIAgEhYKEU5vdENvbnRlbnRJbmRleGVkEIBAEg8KCUVuY3J5",
-            "cHRlZBCAgAESFQoPSW50ZWdyaXR5U3RyZWFtEICAAhIRCgtOb1NjcnViRGF0",
-            "YRCAgAgyjAEKDEltYWdlU2VydmljZRI3CghHZXRJbWFnZRITLkltYWdlLklt",
-            "YWdlUmVxdWVzdBoULkltYWdlLkltYWdlUmVzcG9uc2UiABJDCgxHZXRJbWFn",
-            "ZUxpc3QSFy5JbWFnZS5JbWFnZUxpc3RSZXF1ZXN0GhguSW1hZ2UuSW1hZ2VM",
-            "aXN0UmVzcG9uc2UiAGIGcHJvdG8z"));
+            "cmlidXRlcxgLIAEoDjIVLkltYWdlLkZpbGVBdHRyaWJ1dGVzIigKCUltYWdl",
+            "TGlzdBIbCgVJbWFnZRgBIAMoCzIMLkltYWdlLkltYWdlIiAKDEltYWdlUmVx",
+            "dWVzdBIQCghGaWxlUGF0aBgBIAEoCSIsCg1JbWFnZVJlc3BvbnNlEhsKBUlt",
+            "YWdlGAEgASgLMgwuSW1hZ2UuSW1hZ2UiKQoQSW1hZ2VMaXN0UmVxdWVzdBIV",
+            "Cg1EaXJlY3RvcnlQYXRoGAEgASgJIjgKEUltYWdlTGlzdFJlc3BvbnNlEiMK",
+            "CUltYWdlTGlzdBgBIAEoCzIQLkltYWdlLkltYWdlTGlzdCq1AgoORmlsZUF0",
+            "dHJpYnV0ZXMSIgoeRmlyc3RFbnVtVmFsdWVUb0JlWmVyb0luUHJvdG8zEAAS",
+            "DAoIUmVhZE9ubHkQARIKCgZIaWRkZW4QAhIKCgZTeXN0ZW0QBBINCglEaXJl",
+            "Y3RvcnkQEBILCgdBcmNoaXZlECASCgoGRGV2aWNlEEASCwoGTm9ybWFsEIAB",
+            "Eg4KCVRlbXBvcmFyeRCAAhIPCgpTcGFyc2VGaWxlEIAEEhEKDFJlcGFyc2VQ",
+            "b2ludBCACBIPCgpDb21wcmVzc2VkEIAQEgwKB09mZmxpbmUQgCASFgoRTm90",
+            "Q29udGVudEluZGV4ZWQQgEASDwoJRW5jcnlwdGVkEICAARIVCg9JbnRlZ3Jp",
+            "dHlTdHJlYW0QgIACEhEKC05vU2NydWJEYXRhEICACDKMAQoMSW1hZ2VTZXJ2",
+            "aWNlEjcKCEdldEltYWdlEhMuSW1hZ2UuSW1hZ2VSZXF1ZXN0GhQuSW1hZ2Uu",
+            "SW1hZ2VSZXNwb25zZSIAEkMKDEdldEltYWdlTGlzdBIXLkltYWdlLkltYWdl",
+            "TGlzdFJlcXVlc3QaGC5JbWFnZS5JbWFnZUxpc3RSZXNwb25zZSIAYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Image.FileAttributes), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Image.Image), global::Image.Image.Parser, new[]{ "Name", "Length", "DirectoryName", "IsReadOnly", "IsExists", "FullName", "Extension", "CreationTimeUtc", "LastAccessTimeUtc", "LastWriteTimeUtc", "Attributes", "ImageBlob" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Image.Image), global::Image.Image.Parser, new[]{ "Name", "Length", "DirectoryName", "IsReadOnly", "IsExists", "FullName", "Extension", "CreationTimeUtc", "LastAccessTimeUtc", "LastWriteTimeUtc", "Attributes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Image.ImageList), global::Image.ImageList.Parser, new[]{ "Image" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Image.ImageRequest), global::Image.ImageRequest.Parser, new[]{ "FilePath" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Image.ImageResponse), global::Image.ImageResponse.Parser, new[]{ "Image" }, null, null, null, null),
@@ -132,7 +132,6 @@ namespace Image {
       lastAccessTimeUtc_ = other.lastAccessTimeUtc_ != null ? other.lastAccessTimeUtc_.Clone() : null;
       lastWriteTimeUtc_ = other.lastWriteTimeUtc_ != null ? other.lastWriteTimeUtc_.Clone() : null;
       attributes_ = other.attributes_;
-      imageBlob_ = other.imageBlob_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -265,24 +264,15 @@ namespace Image {
     /// <summary>Field number for the "Attributes" field.</summary>
     public const int AttributesFieldNumber = 11;
     private global::Image.FileAttributes attributes_ = global::Image.FileAttributes.FirstEnumValueToBeZeroInProto3;
+    /// <summary>
+    /// bytes ImageBlob = 12;
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Image.FileAttributes Attributes {
       get { return attributes_; }
       set {
         attributes_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "ImageBlob" field.</summary>
-    public const int ImageBlobFieldNumber = 12;
-    private pb::ByteString imageBlob_ = pb::ByteString.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pb::ByteString ImageBlob {
-      get { return imageBlob_; }
-      set {
-        imageBlob_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -312,7 +302,6 @@ namespace Image {
       if (!object.Equals(LastAccessTimeUtc, other.LastAccessTimeUtc)) return false;
       if (!object.Equals(LastWriteTimeUtc, other.LastWriteTimeUtc)) return false;
       if (Attributes != other.Attributes) return false;
-      if (ImageBlob != other.ImageBlob) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -331,7 +320,6 @@ namespace Image {
       if (lastAccessTimeUtc_ != null) hash ^= LastAccessTimeUtc.GetHashCode();
       if (lastWriteTimeUtc_ != null) hash ^= LastWriteTimeUtc.GetHashCode();
       if (Attributes != global::Image.FileAttributes.FirstEnumValueToBeZeroInProto3) hash ^= Attributes.GetHashCode();
-      if (ImageBlob.Length != 0) hash ^= ImageBlob.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -394,10 +382,6 @@ namespace Image {
         output.WriteRawTag(88);
         output.WriteEnum((int) Attributes);
       }
-      if (ImageBlob.Length != 0) {
-        output.WriteRawTag(98);
-        output.WriteBytes(ImageBlob);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -452,10 +436,6 @@ namespace Image {
         output.WriteRawTag(88);
         output.WriteEnum((int) Attributes);
       }
-      if (ImageBlob.Length != 0) {
-        output.WriteRawTag(98);
-        output.WriteBytes(ImageBlob);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -498,9 +478,6 @@ namespace Image {
       }
       if (Attributes != global::Image.FileAttributes.FirstEnumValueToBeZeroInProto3) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Attributes);
-      }
-      if (ImageBlob.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(ImageBlob);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -555,9 +532,6 @@ namespace Image {
       }
       if (other.Attributes != global::Image.FileAttributes.FirstEnumValueToBeZeroInProto3) {
         Attributes = other.Attributes;
-      }
-      if (other.ImageBlob.Length != 0) {
-        ImageBlob = other.ImageBlob;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -627,10 +601,6 @@ namespace Image {
             Attributes = (global::Image.FileAttributes) input.ReadEnum();
             break;
           }
-          case 98: {
-            ImageBlob = input.ReadBytes();
-            break;
-          }
         }
       }
     #endif
@@ -697,10 +667,6 @@ namespace Image {
           }
           case 88: {
             Attributes = (global::Image.FileAttributes) input.ReadEnum();
-            break;
-          }
-          case 98: {
-            ImageBlob = input.ReadBytes();
             break;
           }
         }

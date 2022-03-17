@@ -19,8 +19,8 @@ namespace gRPCClient
 
             Channel channel = new Channel(target, 
                 ChannelCredentials.Insecure,
-                new List<ChannelOption> { new ChannelOption(ChannelOptions.MaxReceiveMessageLength, 500 * 1024 * 1024),
-                new ChannelOption(ChannelOptions.MaxSendMessageLength, 500 * 1024 * 1024)});
+                new List<ChannelOption> { new ChannelOption(ChannelOptions.MaxReceiveMessageLength, 1000 * 1024 * 1024),
+                new ChannelOption(ChannelOptions.MaxSendMessageLength, 1000 * 1024 * 1024)});
 
             channel.ConnectAsync().ContinueWith((task) =>
             {
@@ -30,19 +30,25 @@ namespace gRPCClient
 
             client = new ImageService.ImageServiceClient(channel);
 
-            GetSingleImage();
+            using (var bench = new Benchmark($"gRPCClient|gRPC :: Get Single Image"))
+            {
+                GetSingleImage();
+            }
 
-            GetImageList();
-
+            using (var bench = new Benchmark($"gRPCClient|gRPC :: Get ImageList"))
+            {
+                GetImageList();
+            }
             channel.ShutdownAsync().Wait();
             Console.ReadKey();
         }
 
         public static void GetSingleImage()
         {
+            
             var ImageRequest = new ImageRequest()
             {
-                FilePath = @"D:\Thamarai\Research\Downloads\coil-100\coil-100\obj100__355.png"
+                FilePath = @"D:\Thamarai\Research\Downloads\TestImages\Img-0.jpg"
             };
 
             Image.ImageResponse response = client.GetImage(ImageRequest);
@@ -58,7 +64,7 @@ namespace gRPCClient
         {
             var ImageListRequest = new ImageListRequest()
             {
-                DirectoryPath = @"D:\Thamarai\Research\Downloads\coil-100\coil-100\"
+                DirectoryPath = @"D:\Thamarai\Research\Downloads\TestImages\"
             };
 
             Image.ImageListResponse response = client.GetImageList(ImageListRequest);
@@ -66,12 +72,6 @@ namespace gRPCClient
             using (var output = File.Create(@"D:\Thamarai\Research\gRPC\Learnings\gRPCDataTransfer\OutputDB.dat"))
             {
                 response.WriteTo(output);
-            }
-            Console.WriteLine("Response Written to file");
-
-            using (var output = File.Create(@"D:\Thamarai\Research\gRPC\Learnings\gRPCDataTransfer\OutputDB_1.dat"))
-            {
-                response.ImageList.WriteTo(output);
             }
             Console.WriteLine("Response Written to file");
 
